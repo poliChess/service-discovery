@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package api;
 
-option go_package = "/logs";
+option go_package = "/proto";
 
 message Status {
 	bool success = 1;
-	string error = 2;
+	string message = 2;
 }
 
 message Service {
