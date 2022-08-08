@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"log"
 	"net"
@@ -48,7 +47,7 @@ func (s *server) Get(ctx context.Context, req *proto.GetRequest) (*proto.GetResp
 				Success: false,
 				Message: "service not found",
 			},
-		}, errors.New("service not found")
+		}, nil
 	}
 
 	addr := l[0]
